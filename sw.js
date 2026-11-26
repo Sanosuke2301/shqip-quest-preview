@@ -1,8 +1,7 @@
-// Version 0.2.2: preview-only cache refresh. Separate databases are unchanged.
-const IS_PREVIEW = new URL(self.registration.scope).pathname.split('/').includes('shqip-quest-preview');
-const CACHE_PREFIX = IS_PREVIEW ? 'sq-preview-' : 'shqip-quest-';
-const CACHE_NAME = CACHE_PREFIX + 'v0.2.2';
-const VERSION = '0.2.2';
+// Version 0.3A.3: CODE-ONLY preview. User-imported MP3s live in private IndexedDB, never public cache.
+const CACHE_PREFIX = 'sq-preview-';
+const CACHE_NAME = CACHE_PREFIX + 'v0.3a.3';
+const VERSION = '0.3a.3';
 
 // Fetch unique URLs for each release, but store the launch page at its normal URL.
 // This avoids keeping an outdated app.js when a browser/CDN cached the previous release.
@@ -28,6 +27,7 @@ self.addEventListener('install', event => {
       if (!response.ok) throw new Error(`Offline asset not available: ${source} (${response.status})`);
       await cache.put(new Request(new URL(key, self.registration.scope).href), response);
     }));
+    // Keep existing preview active until the user clicks Update now.
   })());
 });
 

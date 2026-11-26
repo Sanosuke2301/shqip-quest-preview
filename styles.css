@@ -6,3 +6,17 @@
 .update-banner{background:#fff7d5;border:1px solid #e4c568;border-radius:14px;padding:12px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#513b16;font-weight:650}
 .update-banner button:disabled{opacity:.65}
 @media(max-width:600px){.update-banner{flex-direction:column;align-items:stretch}.pronounce-controls .button{flex:1}}
+
+/* v0.3A.3 private local audio pilot */
+.audio-pilot-row{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid #eceef6;padding:16px 0}
+.audio-pilot-row>div:first-child>div{font-size:12px;color:#858da0;margin-top:4px}
+.audio-pilot-actions{display:flex;gap:7px;flex-wrap:wrap}
+.audio-pilot-actions .button{font-size:12px;padding:9px 12px}
+.audio-pilot-toolbar{display:flex;gap:13px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.audio-pilot-toolbar label{display:flex;gap:8px;align-items:center;color:#5d6580;font-size:13px;font-weight:700}
+.audio-pilot-toolbar select{padding:9px;border:1px solid #d9dced;border-radius:9px}
+.audio-choice{display:block;text-align:left;width:100%;border:2px solid #e5e8f1;border-radius:13px;background:white;padding:16px;margin:9px 0;color:#2b3858;font-weight:750}
+.audio-choice:disabled{opacity:1}
+.audio-choice.right{background:#ebf9f0;border-color:#37af84}
+#private-audio-files{display:block;max-width:100%;margin:14px 0;color:#3a4664}
+@media(max-width:680px){.audio-pilot-row{align-items:stretch;flex-direction:column}.audio-pilot-actions .button{flex:1}.audio-pilot-toolbar{align-items:stretch;flex-direction:column}}
