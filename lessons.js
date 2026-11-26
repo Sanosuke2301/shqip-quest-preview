@@ -17,7 +17,8 @@ export const LESSONS = [
       { type:'choice', prompt:'What does “Tung” commonly mean in Kosovo?', options:['Hi or bye','Good morning only','Thank you'], answer:'Hi or bye', note:'Tung is used informally as a greeting or farewell.' },
       { type:'choice', prompt:'You are leaving a friend. Which word means “goodbye”?', options:['Mirupafshim','Numrat','Jam mirë'], answer:'Mirupafshim', note:'Mirupafshim means goodbye.' },
       { type:'choice', prompt:'Which greeting is associated with everyday Kosovo speech?', options:['Tung','Tre','Mami'], answer:'Tung', note:'Tung is a common informal form in Kosovo.' },
-      { type:'choice', prompt:'What is the meaning of “Përshëndetje”?', options:['Hello','Please','One'], answer:'Hello', note:'You have learned a useful first greeting!' }
+      { type:'choice', prompt:'What is the meaning of “Përshëndetje”?', options:['Hello','Please','One'], answer:'Hello', note:'You have learned a useful first greeting!' },
+      { type:'listen', audioWord:'Përshëndetje', variety:'Standard / Shared', prompt:'Listen to the Albanian greeting. What does it mean?', fallbackPrompt:'What does “Përshëndetje” mean?', options:['Hello','Goodbye','Please'], answer:'Hello', note:'Përshëndetje means hello or greetings.' }
     ]
   },
   {
@@ -33,7 +34,9 @@ export const LESSONS = [
       { type:'choice', prompt:'Which is a common Kosovo/Gheg version of “How are you?”', options:['Qysh je?','Natën e mirë','Faleminderit'], answer:'Qysh je?', note:'Qysh je? is a familiar conversational form in Kosovo.' },
       { type:'arrange', prompt:'Put the words in order to say “I am fine”.', tokens:['mirë','Jam'], answer:'Jam mirë', note:'Jam mirë means I am well / I am fine.' },
       { type:'choice', prompt:'Someone asks “Qysh je?” What are they asking?', options:['How are you?','Are you hungry?','Where are you going?'], answer:'How are you?', note:'The question has the same meaning as standard Si je?' },
-      { type:'choice', prompt:'Which phrase is a good reply to “Si je?”', options:['Jam mirë','Mirupafshim','Përshëndetje'], answer:'Jam mirë', note:'Jam mirë: I am fine.' }
+      { type:'choice', prompt:'Which phrase is a good reply to “Si je?”', options:['Jam mirë','Mirupafshim','Përshëndetje'], answer:'Jam mirë', note:'Jam mirë: I am fine.' },
+      { type:'listen', audioWord:'Si je?', variety:'Standard / Shared', prompt:'Listen to the question. What does it mean?', fallbackPrompt:'What does “Si je?” mean?', options:['How are you?','Where are you?','Thank you'], answer:'How are you?', note:'Si je? asks how someone is doing.' },
+      { type:'listen', audioWord:'Qysh je?', variety:'Kosovo/Gheg', prompt:'Listen to the Kosovo expression. What does it mean?', fallbackPrompt:'What does “Qysh je?” mean?', options:['Where are you?','How are you?','Please'], answer:'How are you?', note:'Qysh je? is common conversational Kosovo Albanian.' }
     ]
   },
   {
@@ -66,6 +69,7 @@ export const LESSONS = [
       { type:'choice', prompt:'What does “Mirupafshim” mean?', options:['Goodbye','Please','Thank you'], answer:'Goodbye', note:'Mirupafshim means goodbye.' },
       { type:'arrange', prompt:'Create the reply “I am fine”.', tokens:['mirë','Jam'], answer:'Jam mirë', note:'Well done: Jam mirë.' },
       { type:'choice', prompt:'Choose the word for “thank you”.', options:['Faleminderit','Tung','Përshëndetje'], answer:'Faleminderit', note:'A phrase to use every day!' },
+      { type:'listen', audioWord:'Faleminderit', variety:'Standard / Shared', prompt:'Listen to this phrase. What does it mean?', fallbackPrompt:'What does “Faleminderit” mean?', options:['Hello','Thank you','Goodbye'], answer:'Thank you', note:'Faleminderit means thank you.' },
       { type:'choice', prompt:'Which phrase means “please”?', options:['Të lutem','Si je?','Mirupafshim'], answer:'Të lutem', note:'Të lutem means please.' },
       { type:'choice', prompt:'Which informal word can mean both “hi” and “bye” in Kosovo?', options:['Tung','Jam','Mirë'], answer:'Tung', note:'Tung can be used for hello or goodbye.' }
     ]

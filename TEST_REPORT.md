@@ -1,20 +1,20 @@
-# Shqip Quest v0.3A.3 — Technical Test Report
+# v0.3A.4 Build and Testing Report
 
-## Passed checks
-- `app.js` and `sw.js` passed Node.js syntax checks.
-- Unit tests verified all eight original filenames map to distinct recording IDs.
-- Unit tests verified `Qysh je?` and other phrase-to-voice mappings, missing-audio behaviour, challenge readiness, local Audio Lab rendering, male/female lesson buttons and listening challenge UI.
-- Package review confirmed **zero MP3 recordings** and no audio folders or online candidate-audio URLs in the service-worker pre-cache.
-- Verified the existing preview learner DB (`shqip-quest-preview-db`) and separate audio DB (`shqip-quest-preview-private-audio-v1`) names in source.
-- Verified release-specific preview cache prefix `sq-preview-`, build version `0.3a.3`, and versioned asset URLs.
-- Audio practice is designed to award no XP, with no mutation of the existing learner profile schema.
+Date: 26 November 2026
 
-## Not yet tested
-- Browser end-to-end and offline playback: Chromium navigation to localhost is blocked by this execution environment (`ERR_BLOCKED_BY_ADMINISTRATOR`). This is **not** evidence of application failure; actual deployment and Android browser testing are required.
-- Publication rights for Llafazani and WevoLabs: **not cleared**. A fluent speaker has approved pronunciations, not rights.
+## Source
+Forked from the known working `Shqip_Quest_v0.3A.3_Code_Only_Preview.zip` package and checked against the currently uploaded `shqip-quest-preview` code. The user previously reported successful offline audio playback from privately imported MP3 files.
 
-## Deployment guardrails
-- Upload the code-only ZIP solely to `shqip-quest-preview`.
-- Import the eight privately retained MP3 files from the browser's file chooser, not through GitHub.
-- Leave `shqip-quest` production Version 0.2.3 untouched.
-- Do not clear the site's IndexedDB/local storage or uninstall existing apps.
+## Performed checks
+- `node --check` passed for `app.js`, `lessons.js`, and `sw.js`.
+- 15 JavaScript VM behavior checks passed: old question indexes retained; only reviewed phrases used; two separate databases retained; child-specific preferred voice; fallback to text if files missing; fallback to alternate provider; answer not revealed on audio question; preview isolation; and retained learner fields.
+- New listening questions appended after original questions in lessons 1, 2 and 3, preserving earlier mastery keys.
+- Checked the package contains **no MP3 files** and the service worker does not fetch audio assets.
+
+## Not yet completed
+- Full end-to-end browser and Android PWA testing: this execution environment blocked Chromium localhost navigation (`net::ERR_BLOCKED_BY_ADMINISTRATOR`). The user should perform the acceptance steps in `TEST_CHECKLIST.md` before treating this preview as stable.
+- Manual verification that new lessons load correctly on the user's actual Android browsers and imported audio remains usable after the update.
+- Rights clearance for public redistribution of source TTS recordings. Audio remains private.
+
+## Release rule
+**Do not deploy this ZIP to production.** First verify on preview, preserve learner backup, and establish publication rights separately before any MP3s are publicly redistributed.

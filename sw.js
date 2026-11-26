@@ -1,7 +1,7 @@
-// Version 0.3A.3: CODE-ONLY preview. User-imported MP3s live in private IndexedDB, never public cache.
+// Version 0.3A.4: CODE-ONLY preview. User-imported MP3s live in private IndexedDB, never public cache.
 const CACHE_PREFIX = 'sq-preview-';
-const CACHE_NAME = CACHE_PREFIX + 'v0.3a.3';
-const VERSION = '0.3a.3';
+const CACHE_NAME = CACHE_PREFIX + 'v0.3a.4';
+const VERSION = '0.3a.4';
 
 // Fetch unique URLs for each release, but store the launch page at its normal URL.
 // This avoids keeping an outdated app.js when a browser/CDN cached the previous release.
