@@ -89,6 +89,29 @@ export const LESSONS = [
       {type:'choice',prompt:'What does “motra” mean?',options:['Sister','Brother','Mother'],answer:'Sister',note:'Motra is Albanian for sister.'},
       {type:'arrange',prompt:'Put the words together to say “my sister”.',tokens:['ime','Motra'],answer:'Motra ime',note:'Motra ime means my sister.'}
     ]
+
+  },
+  {
+    id:'family-2',short:'More family words',title:'Familja: Meet the family',unit:'Familja',emoji:'🏡',kind:'lesson',
+    desc:'Learn more Albanian family words. New vocabulary is a draft for fluent-speaker review.',
+    cards:[
+      {al:'Babai',en:'Father / dad',variety:'Standard (review pending)',note:'Babai is a common form for father.'},
+      {al:'Vëllai',en:'Brother',variety:'Standard (review pending)',note:'Vëllai refers to a brother.'},
+      {al:'Gjyshja',en:'Grandmother',variety:'Standard (review pending)',note:'A family word for grandmother.'},
+      {al:'Gjyshi',en:'Grandfather',variety:'Standard (review pending)',note:'A family word for grandfather.'},
+      {al:'Familja',en:'Family',variety:'Standard (review pending)',note:'The word for family.'},
+      {al:'Mami',en:'Mum / mummy',variety:'Everyday speech (review pending)',note:'An affectionate everyday word for mother.'}
+    ],
+    questions:[
+      {type:'choice',prompt:'What does “Vëllai” mean?',options:['Brother','Sister','Father'],answer:'Brother',note:'Vëllai means brother.'},
+      {type:'choice',prompt:'Which word means “grandmother”?',options:['Gjyshja','Gjyshi','Babai'],answer:'Gjyshja',note:'Gjyshja means grandmother.'},
+      {type:'choice',prompt:'What does “Gjyshi” mean?',options:['Grandfather','Brother','Mother'],answer:'Grandfather',note:'Gjyshi means grandfather.'},
+      {type:'choice',prompt:'Choose the Albanian word for “family”.',options:['Familja','Motra','Mami'],answer:'Familja',note:'Familja means family.'},
+      {type:'choice',prompt:'Which word can mean “father”?',options:['Babai','Gjyshja','Vëllai'],answer:'Babai',note:'Babai is a form for father.'},
+      {type:'arrange',prompt:'Arrange the words to say “my father”.',tokens:['im','Babai'],answer:'Babai im',note:'Babai im means my father.'},
+      {type:'choice',prompt:'Which familiar word might a child use for “mum”?',options:['Mami','Gjyshi','Vëllai'],answer:'Mami',note:'Mami is an everyday word for mum.'}
+    ]
+
   }
 
 ];

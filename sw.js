@@ -1,7 +1,7 @@
-// Version 0.3A.4: CODE-ONLY preview. User-imported MP3s live in private IndexedDB, never public cache.
+// Version 0.3B.1: preview. Four Llafazani male MP3 files bundled offline. Female candidates remain private.
 const CACHE_PREFIX = 'sq-preview-';
-const CACHE_NAME = CACHE_PREFIX + 'v0.3a.4';
-const VERSION = '0.3a.4';
+const CACHE_NAME = CACHE_PREFIX + 'v0.3b.1';
+const VERSION = '0.3b.1';
 
 // Fetch unique URLs for each release, but store the launch page at its normal URL.
 // This avoids keeping an outdated app.js when a browser/CDN cached the previous release.
@@ -13,7 +13,11 @@ const PRECACHE = [
   [`./lessons.js?build=${VERSION}`, `./lessons.js?build=${VERSION}`],
   ['./manifest.webmanifest', `./manifest.webmanifest?build=${VERSION}`],
   ['./assets/icon-192.png', `./assets/icon-192.png?build=${VERSION}`],
-  ['./assets/icon-512.png', `./assets/icon-512.png?build=${VERSION}`]
+  ['./assets/icon-512.png', `./assets/icon-512.png?build=${VERSION}`],
+  ['./audio/llafazani/pershendetje.mp3', `./audio/llafazani/pershendetje.mp3?build=${VERSION}`],
+  ['./audio/llafazani/si-je.mp3', `./audio/llafazani/si-je.mp3?build=${VERSION}`],
+  ['./audio/llafazani/faleminderit.mp3', `./audio/llafazani/faleminderit.mp3?build=${VERSION}`],
+  ['./audio/llafazani/qysh-je.mp3', `./audio/llafazani/qysh-je.mp3?build=${VERSION}`]
 ];
 
 self.addEventListener('install', event => {

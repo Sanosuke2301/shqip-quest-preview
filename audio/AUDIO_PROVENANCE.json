@@ -1,0 +1,52 @@
+{
+  "project": "Shqip Quest",
+  "build": "0.3B.1",
+  "asset_type": "AI-generated speech",
+  "date": "2026-11-27",
+  "files": {
+    "pershendetje.mp3": {
+      "source_filename": "Llafazani_Përshëndetje.mp3",
+      "sha256": "1f93156b7555bce63654e5cf2e03a82901aaf9ae9470c420b062f3197fe0f891",
+      "bytes": 9206,
+      "generator": "Llafazani",
+      "reviewer": "EN",
+      "linguistic_status": "approved",
+      "source_zip": "Simple_Audio.zip",
+      "distribution_status": "site terms permit commercial use (reviewed 2026-11-27)",
+      "license_url": "https://llafazani.com/kushtet.html"
+    },
+    "si-je.mp3": {
+      "source_filename": "Llafazani_Si je.mp3",
+      "sha256": "eb30371a13b89d363a36ca4ab40665bf7c5614d9cbe4755154c9f7124bfd6651",
+      "bytes": 5942,
+      "generator": "Llafazani",
+      "reviewer": "EN",
+      "linguistic_status": "approved",
+      "source_zip": "Simple_Audio.zip",
+      "distribution_status": "site terms permit commercial use (reviewed 2026-11-27)",
+      "license_url": "https://llafazani.com/kushtet.html"
+    },
+    "faleminderit.mp3": {
+      "source_filename": "Llafazani_Faleminderit.mp3",
+      "sha256": "d9aa2cf639c1a2615c6d897d633b9388ecdb6cf546cf57aa8adc6abfab341e6e",
+      "bytes": 9782,
+      "generator": "Llafazani",
+      "reviewer": "EN",
+      "linguistic_status": "approved",
+      "source_zip": "Simple_Audio.zip",
+      "distribution_status": "site terms permit commercial use (reviewed 2026-11-27)",
+      "license_url": "https://llafazani.com/kushtet.html"
+    },
+    "qysh-je.mp3": {
+      "source_filename": "Llafazani_Qysh je.mp3",
+      "sha256": "841875b97c6158b62e96b8b9cd06b3a5683cb9b4ad510f72ad82206dfb10d805",
+      "bytes": 6710,
+      "generator": "Llafazani",
+      "reviewer": "EN",
+      "linguistic_status": "approved",
+      "source_zip": "Simple_Audio.zip",
+      "distribution_status": "site terms permit commercial use (reviewed 2026-11-27)",
+      "license_url": "https://llafazani.com/kushtet.html"
+    }
+  }
+}
