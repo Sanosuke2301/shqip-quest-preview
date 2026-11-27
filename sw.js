@@ -1,7 +1,7 @@
-// Version 0.3B.1: preview. Four Llafazani male MP3 files bundled offline. Female candidates remain private.
+// Version 0.3B.2: preview. Four Llafazani male MP3 files bundled offline. Female candidates remain private.
 const CACHE_PREFIX = 'sq-preview-';
-const CACHE_NAME = CACHE_PREFIX + 'v0.3b.1';
-const VERSION = '0.3b.1';
+const CACHE_NAME = CACHE_PREFIX + 'v0.3b.2';
+const VERSION = '0.3b.2';
 
 // Fetch unique URLs for each release, but store the launch page at its normal URL.
 // This avoids keeping an outdated app.js when a browser/CDN cached the previous release.

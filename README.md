@@ -1,43 +1,33 @@
-# Shqip Quest v0.3B.1 — Bundled male audio + Family expansion
+# Shqip Quest v0.3B.2 — Balanced answer order (preview only)
 
-**TARGET: `Sanosuke2301/shqip-quest-preview` ONLY. Do not upload to production (`Sanosuke2301/shqip-quest`).**
+## What changed
 
-## What's new
+The quiz previously displayed answer options in the exact order specified in `lessons.js`. Because many correct answers were first in that list, A was often correct. This preview update fixes the presentation logic without changing the lesson questions.
 
-- The 4 fluent-reviewed **Llafazani male MP3s** are INCLUDED in `audio/llafazani/`: `pershendetje.mp3`, `si-je.mp3`, `faleminderit.mp3`, `qysh-je.mp3`.
-- The service worker caches all four male MP3s for offline playback. Users no longer need to import those four on each device. First installation/upgrade must be completed **online**.
-- Each learner retains their choice of voice. If a female voice is preferred but unavailable, the app plays the included male recording instead. Female WevoLabs clips are **not** in the ZIP or public cache. Where already privately installed on the current browser, they remain available.
-- The optional Parent Audio Library permits importing WevoLabs clips privately as before. It shows `4/4 male recordings included` and the number of locally installed female recordings.
-- Adds **one** new lesson, `family-2` (More family words): six draft vocabulary cards and seven questions. This draft is for fluent Albanian review. No recordings for these new words are claimed or included yet.
-- All existing lesson identifiers, quiz question order, learner database/store names, existing badges, XP, and backup schemas are unchanged. The old `family-1` lesson is unchanged.
-- Version display, app asset query strings and preview-only SW cache updated to `0.3b.1`.
+- Multiple-choice, picture, and audio/listening questions now show shuffled answer choices.
+- Correct answer *positions* are balanced within each lesson attempt: for each number of answer choices (usually 3), the positions A/B/C are randomly cycled through rather than repeating the same correct position for many questions.
+- Choices stay in their assigned positions while the learner listens, answers, or receives feedback.
+- Picture choices retain their original matching visual labels.
+- The four-question optional listening challenge also shuffles answer order and uses balanced positions.
+- New random orders are created on each new lesson or Personal Review attempt, not while the learner is answering.
+- `lessons.js` is unchanged, including question ordering, correct answer text, answer IDs, and all learning content. No profile schema changes, migrations, or data clearing are needed.
 
-## Install to GitHub **PREVIEW ONLY**
+## Install — PREVIEW ONLY
 
-1. From the **current preview**, open Parent corner → **Export family backup** and save the JSON locally. This backs up profiles, progress and voice preferences; it does not include private female MP3s.
-2. Download and extract `Shqip_Quest_v0.3B.1_Preview_With_Llafazani_Audio.zip` on Windows. You will see the normal application files plus `audio/llafazani/` containing **four** MP3 files. There are no WevoLabs MP3s.
-3. Open <https://github.com/Sanosuke2301/shqip-quest-preview> (NOT the main production repository). Choose **Add file → Upload files**, and upload the extracted project contents to the repository root. Preserve directories `assets/` and `audio/llafazani/`. **Do not upload the ZIP itself.** If your browser doesn't preserve folders, use GitHub Desktop to commit the extracted folder structure, or create the nested paths manually in GitHub.
-4. Commit, and make sure GitHub Pages deployment completes successfully.
-5. Open <https://sanosuke2301.github.io/shqip-quest-preview/> **online**. Apply **Update now** when prompted, reopen, and confirm Parent corner shows **VERSION 0.3B.1 · PREVIEW STORAGE**.
-6. Open **Parent → Audio Library**. Confirm `4/4 male recordings included`. Play each. **You should not need to import male audio.** If your existing female MP3s were previously installed, check they remain available. If not, import only the female files privately from the original `Simple_Audio.zip`. Never upload the WevoLabs audio to GitHub.
-7. Complete the offline and learner-progress acceptance checks in `TEST_CHECKLIST.md`. Do not clear browser site data or uninstall the current PWA during the update.
-8. Review six new vocabulary entries with `FAMILY_VOCAB_REVIEW.csv`; do not treat draft Family 2 wording as fluent-speaker approved until you sign off.
+1. Export a backup from the current Shqip Quest preview using **Parent corner → Export family backup**.
+2. Extract `Shqip_Quest_v0.3B.2_Preview_Randomised_Answers.zip` on Windows.
+3. Upload the extracted contents, preserving subfolders, to **Sanosuke2301/shqip-quest-preview** only. Replace existing files where prompted. Do not upload the ZIP itself. Do **not** update the production `shqip-quest` repository.
+4. Your app should load and prompt to **Update now**; accept outside a lesson. If the page appears old, close/reopen the PWA and check Parent corner for `VERSION 0.3B.2 · PREVIEW STORAGE`.
+5. Replay a greetings lesson twice. Notice that correct choices can appear at A, B or C, and order may change between attempts, but does not jump around after an answer.
+6. Check the picture questions and their labels, listening questions and score, then test offline by entering airplane mode after the update.
+7. Confirm the four bundled Llafazani recordings play without importing audio, existing optional private female recordings still work, and progress/XP/profiles remain intact.
 
-## Safety and compatibility
+## Data and licensing safety
 
-- Existing preview profile data: **`shqip-quest-preview-db`**, store **`profiles`** (unchanged).
-- Existing optional private audio data: **`shqip-quest-preview-private-audio-v1`**, store **`clips`** (unchanged).
-- Existing localStorage active learner key: **`sq-preview-active`** (unchanged).
-- New preview-only cache: **`sq-preview-v0.3b.1`**; the service worker keeps the previous preview working until the user applies the update.
-- Existing production app is unaffected. No server-side user data, analytics or synchronisation has been introduced.
-- After initial loading online, four male recordings are offline cached, and private female recordings on that same browser remain local. Do not assume female audio synchronises to a new device.
-- Published Llafazani files include provenance and checksums at `audio/AUDIO_PROVENANCE.json`. They are AI-generated speech, not human recordings.
-- The public inclusion is based on Llafazani's published terms permitting use of the generated audio for personal and commercial purposes; see `AUDIO_LICENSE_NOTE.md`. These terms should be retained as evidence and rechecked before any broad commercial release. **WevoLabs rights remain pending**.
+- Production is unchanged; the preview stays in `shqip-quest-preview-db` and uses the same `sq-preview-active` key.
+- Private WevoLabs clips remain in the original local `shqip-quest-preview-private-audio-v1` IndexedDB database; the public package includes **no WevoLabs MP3s**.
+- Four approved Llafazani MP3s remain bundled and unchanged, and are included in the offline cache.
+- Service worker cache updates from `sq-preview-v0.3b.1` to `sq-preview-v0.3b.2`; old preview cache is cleaned only when the user applies the update.
+- Existing learner question IDs and stored mastery references remain unchanged.
 
-## What happens after WevoLabs replies?
-
-If its public distribution rights are confirmed, add the four female MP3s under `audio/wevolabs/`, add four key/path entries to `BUNDLED_AUDIO` in `app.js`, include those paths in the service-worker PRECACHE and release a new preview version. The existing voice preferences and question content will continue to work without a learner-data migration. If permission is declined, retain the private-only arrangement or use separately licensed human/AI recordings.
-
-## Current scope
-
-This is **v0.3B.1 preview**, not a production rollout. Further curriculum phases (Numbers, Colours and Everyday Expressions), unrecorded family vocabulary audio and final female-audio licensing are not yet implemented.
+See `TEST_CHECKLIST.md` and `TEST_REPORT.md` for verification details.
