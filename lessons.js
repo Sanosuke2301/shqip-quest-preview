@@ -114,6 +114,52 @@ export const LESSONS = [
 
   }
 
+  ,{
+    id:'family-3',short:'People in my family',title:'Familja: Children and parents',unit:'Familja',emoji:'🧒',kind:'lesson',
+    desc:'Meet four more useful words for parents and children. New wording is awaiting fluent-speaker review.',
+    cards:[
+      {al:'Prindërit',en:'Parents',variety:'Standard proposal · review pending',note:'This word refers to parents. Families can have many different shapes.'},
+      {al:'Fëmija',en:'Child',variety:'Standard proposal · review pending',note:'A word for a child.'},
+      {al:'Djali',en:'Boy / Son',variety:'Standard proposal · review pending',note:'Can mean a boy, or a son when discussing family.'},
+      {al:'Vajza',en:'Girl / Daughter',variety:'Standard proposal · review pending',note:'Can mean a girl, or a daughter when discussing family.'}
+    ],
+    questions:[
+      {type:'picture',prompt:'Which picture best shows “prindërit” (parents)?',options:['👨‍👩','👵','👶'],labels:['Two parents','A grandparent','A baby'],answer:'👨‍👩',note:'Prindërit refers to parents. This icon is only one possible family arrangement.'},
+      {type:'choice',prompt:'What does “Fëmija” mean?',options:['Child','Father','Grandfather'],answer:'Child',note:'Fëmija means the child.'},
+      {type:'choice',prompt:'In a family, what can “Djali” mean?',options:['Boy / Son','Girl / Daughter','Grandmother'],answer:'Boy / Son',note:'Djali can mean the boy or the son, depending on context.'},
+      {type:'choice',prompt:'In a family, what can “Vajza” mean?',options:['Girl / Daughter','Boy / Son','Grandfather'],answer:'Girl / Daughter',note:'Vajza can mean the girl or the daughter, depending on context.'},
+      {type:'arrange',prompt:'Put the words in order for “my son”.',tokens:['im','Djali'],answer:'Djali im',note:'Djali im means my son.'},
+      {type:'picture',prompt:'Which picture best illustrates “fëmija” (child)?',options:['🧒','👴','🚙'],labels:['A child','An older adult','A car'],answer:'🧒',note:'Fëmija means the child.'},
+      {type:'listen',audioWord:'Prindërit',variety:'Standard proposal · pending review',prompt:'Listen. What does this family word mean?',fallbackPrompt:'What does “Prindërit” mean?',options:['Parents','Children','Grandparents'],answer:'Parents',note:'Prindërit refers to parents.'},
+      {type:'arrange',prompt:'Put the words in order for “my daughter”.',tokens:['ime','Vajza'],answer:'Vajza ime',note:'Vajza ime means my daughter.'},
+      {type:'listen',audioWord:'Vajza',variety:'Standard proposal · pending review',prompt:'Listen. Which meaning matches?',fallbackPrompt:'What does “Vajza” mean in a family?',options:['Girl / Daughter','Boy / Son','Sister'],answer:'Girl / Daughter',note:'Vajza can mean girl or daughter.'}
+    ]
+  },
+  {
+    id:'family-review',short:'Family challenge',title:'Familja: Family challenge',unit:'Familja',emoji:'🌳',kind:'challenge',
+    desc:'Bring together your family vocabulary with pictures, word building and listening where recordings are ready.',
+    cards:[
+      {al:'Nëna · Babai',en:'Mother · Father',variety:'Standard · review pending',note:'Different family words for people who care for us.'},
+      {al:'Motra · Vëllai',en:'Sister · Brother',variety:'Shared / Standard proposal',note:'Two familiar words for siblings.'},
+      {al:'Gjyshja · Gjyshi',en:'Grandmother · Grandfather',variety:'Standard proposal · review pending',note:'Grandparent words.'},
+      {al:'Prindërit · Fëmija',en:'Parents · Child',variety:'Standard proposal · review pending',note:'Two useful words about families.'}
+    ],
+    questions:[
+      {type:'choice',prompt:'What does “Nëna” mean?',options:['Mother','Sister','Grandmother'],answer:'Mother',note:'Nëna is a word for mother.'},
+      {type:'picture',prompt:'Which picture shows a grandmother?',options:['👵','👧','👨'],labels:['Grandmother','Girl','Man'],answer:'👵',note:'Gjyshja means grandmother.'},
+      {type:'choice',prompt:'What does “Vëllai” mean?',options:['Brother','Father','Son'],answer:'Brother',note:'Vëllai is a word for brother.'},
+      {type:'choice',prompt:'What does “Gjyshi” mean?',options:['Grandfather','Grandmother','Brother'],answer:'Grandfather',note:'Gjyshi means grandfather.'},
+      {type:'arrange',prompt:'Put the words together to say “my brother”.',tokens:['im','Vëllai'],answer:'Vëllai im',note:'Vëllai im means my brother.'},
+      {type:'choice',prompt:'Which Albanian word means “parents”?',options:['Prindërit','Fëmija','Gjyshja'],answer:'Prindërit',note:'Prindërit refers to parents.'},
+      {type:'choice',prompt:'Which word means “child”?',options:['Fëmija','Babai','Gjyshi'],answer:'Fëmija',note:'Fëmija means the child.'},
+      {type:'listen',audioWord:'Djali',variety:'Standard proposal · pending review',prompt:'Listen to the word. What could it mean?',fallbackPrompt:'What can “Djali” mean in a family?',options:['Boy / Son','Girl / Daughter','Mother'],answer:'Boy / Son',note:'Djali can mean a boy or a son.'},
+      {type:'listen',audioWord:'Gjyshja',variety:'Standard proposal · pending review',prompt:'Listen to this family word. What does it mean?',fallbackPrompt:'What does “Gjyshja” mean?',options:['Grandmother','Grandfather','Sister'],answer:'Grandmother',note:'Gjyshja means grandmother.'},
+      {type:'choice',prompt:'What does “Familja” mean?',options:['Family','Friend','School'],answer:'Family',note:'Familja means family.'},
+      {type:'picture',prompt:'Which picture best represents a girl or daughter?',options:['👧','👴','👨'],labels:['Girl','Older man','Man'],answer:'👧',note:'Vajza can refer to a girl or daughter.'},
+      {type:'choice',prompt:'Which everyday word may a child use for their mum?',options:['Mami','Gjyshi','Vëllai'],answer:'Mami',note:'Mami is a familiar word for mum.'}
+    ]
+  }
+
 ];
 
 export const BADGES = [
@@ -122,5 +168,6 @@ export const BADGES = [
   { id:'greeting-hero', emoji:'🏆', name:'Greeting Hero', description:'Complete the greetings challenge.' },
   { id:'hundred-xp', emoji:'⭐', name:'100 XP Club', description:'Earn at least 100 XP.' },
   { id:'perfect-lesson', emoji:'💎', name:'Perfect Lesson', description:'Answer every question correctly in a lesson.' },
-  { id:'three-day-streak', emoji:'🔥', name:'On a Roll', description:'Practise on three consecutive days.' }
+  { id:'three-day-streak', emoji:'🔥', name:'On a Roll', description:'Practise on three consecutive days.' },
+  { id:'family-explorer', emoji:'🌳', name:'Family Explorer', description:'Finish the Family challenge.' }
 ];

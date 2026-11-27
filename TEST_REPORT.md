@@ -1,29 +1,47 @@
-# Shqip Quest v0.3B.2 — Answer randomisation test report
+# Shqip Quest v0.3B.3 — Automated test report
 
-## Scope
-This is a **preview-only** maintenance release based on the verified v0.3B.1 GitHub preview. No production repository change was made.
+**Release type:** GitHub Pages preview only. Production remains unchanged.
 
-## Automated results — PASS
+## Results
 
-- JavaScript syntax: `app.js`, `lessons.js`, and `sw.js` passed `node --check`.
-- Content audit: 6 lessons, 38 questions: 27 ordinary choice, 4 listen, 2 picture, 5 word-arrange. All **33 multiple-choice-compatible** questions have the expected answer exactly once in their choices; picture labels have matching original-array lengths.
-- Pure shuffle logic: 1,000 repeated simulations of a 60-question, 3-option mix verified balanced correct answer positions (20 A, 20 B, 20 C in each run), with no source-question mutations.
-- Four-option case: 20 questions balanced with 5 correct positions each for A/B/C/D.
-- Quiz rendering: picture image-label association correct after shuffling, feedback keeps the same positions, correct marking retained.
-- Scoring: `answer()` continues to compare the selected original value with `q.answer` correctly, for both correct and incorrect selections.
-- Path/data integrity: preview IndexedDB names unchanged, Personal Review and lesson starts initialise a new per-attempt order, listening pilot uses precomputed per-question option layouts.
-- Integrity: `lessons.js`, styles, manifest, both icons and all four approved Llafazani MP3 files are byte-for-byte unchanged from v0.3B.1, checked by SHA-256.
-- Offline update: service-worker cache version bumped to `sq-preview-v0.3b.2`; four bundled MP3 precache paths retained.
-- Test runner reported **122,026 assertions passed**.
+**Automated content/data/logic checks: PASS (253 assertions)**
 
-## Not yet tested
+- Eight lessons total, including the two appended Family activities; **59 questions** total: 37 choice, 8 listening, 8 word arrangement, and 6 picture questions.
+- Original six lessons and every original question are **structurally unchanged**, protecting mastery keys based on lesson ID and question index.
+- All choice/picture/listening questions have one unique correct answer, with no duplicate options. Picture labels remain paired with their corresponding emoji illustrations. Word arrangement tokens reconstruct the correct answer.
+- New Family vocabulary set covers 13 reviewable words; filenames map to 13 distinct `-llafazani` local audio IDs.
+- Reading fallback works for the new listening questions when no reviewed MP3 is installed. When an approved local recording is available, the listening control selects the correct audio ID.
+- Unapproved local Family audio imports are rejected. Approved imports are mapped to local IndexedDB records with reviewer provenance. Unsupported filename/provider imports are rejected.
+- The new Family Explorer badge is awarded when the Family challenge is completed.
+- Preview profile database, private audio database, existing answer randomisation logic, and cached greeting audio paths are preserved.
+- All four earlier Llafazani MP3s, both icons and the web manifest are **byte-for-byte identical** to v0.3B.2 by SHA-256. All earlier CSS styles are preserved, with only appended styles for the new Family audio controls.
+- No WevoLabs recordings or unreviewed Family MP3s are bundled.
+- Service worker version updated to `sq-preview-v0.3b.3` and cache-busted app assets target `0.3b.3`.
 
-- Actual end-to-end browser interaction, GitHub Pages deployment and Android airplane-mode update. These are user acceptance tests; see `TEST_CHECKLIST.md`.
+**Interactive Chromium simulation: PASS**
 
-## Safety and behavioural notes
+- Viewport: 420 × 860 (mobile-like layout).
+- Rendered the eight-lesson learning path and both new Family lessons.
+- Completed all **21 new questions via browser clicks**, including picture matching, shuffled choices, word arrangement and missing-audio reading fallback.
+- Verified Family Explorer badge display and award.
+- Verified Parent Audio Library renders its Family recording controls.
+- Verified an import attempt without fluent-speaker approval is rejected, and an explicitly approved dummy MP3 with an accepted filename is stored in the mocked local audio store.
+- No JavaScript page errors observed.
 
-- `Math.random()` is for user-interface variety, not security-sensitive randomness.
-- Balance is calculated for each answer-count grouping within a *single lesson attempt*. For a partial group, the distribution cannot be perfectly equal; repeated lesson attempts can also coincidentally look similar.
-- Answer-order state is ephemeral and never stored in the learner profile, so persistent question mastery indices stay intact.
-- The existing service worker uses the same user-visible update prompt; no forced reset of data or audio.
-- No WevoLabs recordings are present in this package.
+**JavaScript syntax: PASS**
+
+- `node --check` for `app.js`, `lessons.js`, and `sw.js`.
+
+## Limitations — manual acceptance still required
+
+The Chromium interaction test injected the actual app scripts into a static page, with persistence methods **mocked** and a **dummy ID3 test file**. It did not test a true local server navigation, GitHub deployment, PWA installation, real IndexedDB persistence, actual MP3 decoding or playback, Android interface interactions, or the offline service worker update. Run `TEST_CHECKLIST.md` on the preview Android device.
+
+**No additional real Albanian Family MP3s have been generated or approved.** The recording guide supplies text and filenames so a fluent speaker can create, review and privately import them.
+
+## Data/change policy
+
+- Preview IndexedDB (`shqip-quest-preview-db`) and localStorage (`sq-preview-active`) keys remain unchanged.
+- Additional lessons are appended after `family-2`, not inserted into the existing sequence.
+- Existing learner profiles, XP, mastery, achievements and optional private female clips should carry over in the same browser. A backup is still essential before deployment.
+- The home completion percentage can decrease when upgrading, because the learning path expands from six to eight lessons; this does **not** mean prior lesson completion was lost.
+- Production `shqip-quest` remains on its own separate release.

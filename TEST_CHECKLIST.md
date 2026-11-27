@@ -1,17 +1,16 @@
-# Version 0.3B.2 — Android / Windows acceptance checklist
+# v0.3B.3 — Android / browser acceptance checklist
 
-- [ ] Parent corner shows Version 0.3B.2.
-- [ ] Learner profiles, prior scores, XP, badges, voice preferences and completed lessons remain intact.
-- [ ] Answer letters move: correct answers appear in a mix of A/B/C instead of regularly A.
-- [ ] Starting the same lesson again produces a fresh answer arrangement.
-- [ ] The order stays fixed through answer selection, feedback and next-question navigation.
-- [ ] Correct/wrong answers still produce correct feedback and correct XP.
-- [ ] Picture matching labels still match the pictures and correct-answer marking.
-- [ ] Listening questions shuffle answer options but play the correct clip.
-- [ ] The optional Listening Challenge also changes choice order between attempts.
-- [ ] Personal Review questions shuffle choices while recording progress against the original question.
-- [ ] Four bundled Llafazani MP3s play offline without manual import.
-- [ ] Privately installed WevoLabs female MP3s are unaffected on that device.
-- [ ] Airplane mode works after installing the update online.
+1. [ ] Parent corner displays **0.3B.3** after update; no stale 0.3B.2 scripts.
+2. [ ] Existing child profiles, XP, badges, completion and Personal Review history still appear correctly.
+3. [ ] The four prior Llafazani greeting recordings play immediately without importing anything.
+4. [ ] The prior privately imported WevoLabs female recordings still play on the same device.
+5. [ ] *People in my family* (Family 3) shows four new cards and nine questions. Correct answers rotate among positions; picture labels stay with pictures.
+6. [ ] *Family challenge* appears after completing Family 3 and has twelve questions. Finishing awards Family Explorer.
+7. [ ] Family questions referencing unrecorded words show a **readable fallback** rather than a broken audio button.
+8. [ ] In Parent → Audio Library, try to import a new Family MP3 **without** ticking the fluent-speaker approval checkbox; the import must be rejected.
+9. [ ] After verifying one new Llafazani Family recording, tick approval, import its exact `llafazani_<slug>.mp3` filename, and verify its card audio and listening question if applicable.
+10. [ ] Turn on airplane mode after the update. Greetings audio and the newly imported Family audio still play.
+11. [ ] Re-run a new lesson. Answer positions vary across attempts but stay fixed when feedback is displayed.
+12. [ ] Export a fresh family backup after the session and confirm saved profile details remain intact.
 
-**Note:** A fresh random arrangement can occasionally match the previous one by chance. Across a sequence, A/B/C should vary substantially, and in each complete group of three 3-option questions the correct position is balanced.
+**Audio safety:** Do not publish the new Family MP3s or privately imported WevoLabs audio to GitHub. Do not clear browser site data when testing missing-audio behaviour; use a separate browser/device.
