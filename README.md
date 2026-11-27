@@ -1,31 +1,39 @@
-# Shqip Quest v0.3B.3.1 — Question Quality Patch
+# Shqip Quest v0.3B.3.2 — clearer Family illustrations (PREVIEW)
 
-**Preview release only.** Upload the extracted files to `Sanosuke2301/shqip-quest-preview`. Do not modify the production repository (`shqip-quest`).
+This is a complete replacement package for **Sanosuke2301/shqip-quest-preview** only. **Do not upload it to the production `shqip-quest` repository.**
 
-## Why this patch
+## What was changed
 
-One Family Challenge question displayed the literal caption “Grandmother” beneath its correct picture. The same educational design issue appeared in five other picture questions, some also showing an English translation in the prompt. This means children could answer without recognising the Albanian vocabulary.
+The six existing Family picture questions no longer depend on device-specific person emoji, where an adult man may look similar to a boy. They now use a consistent set of **12 original illustrations**: adult woman, girl, grandmother, adult man, grandfather, boy, child, family/parents, baby, cat, car and bicycle.
 
-## Changes
+The pictures deliberately use age and context clues (adult clothing and proportions, a school bag or toy, grey hair for older characters). Family roles cannot be established from appearance alone; these pictures are **illustrative teaching cues**, not claims about what all relatives look like. Future lessons should prefer explicit family scenes or contextual dialogue for terms such as sister, mother and grandfather.
 
-- Reviewed **all 59 authored questions** across **8 lesson/challenge activities**, plus the standalone four-question listening activity and the Personal Review question reuse path.
-- Rewrote all **6 picture-matching prompts** to present the Albanian word without its English translation, e.g. “Which picture best illustrates ‘Gjyshja’?”
-- Picture options now visibly display **Picture A / Picture B / Picture C** with their emojis, not English relationship captions.
-- Replaced picture accessibility descriptions such as “Grandmother” with neutral visual descriptions (e.g. “Older woman”), making the task usable to assistive technology without explicitly revealing the target relationship.
-- The randomised option order remains stable until feedback is given; correct answers, image-option pairings and scoring logic are unchanged.
-- No question was added, removed or re-ordered. Existing XP, profiles, mastery IDs, lesson completion and badges retain their current storage keys.
-- Four previously reviewed Llafazani greeting recordings are still bundled. Existing optional locally imported WevoLabs female and family MP3s are untouched.
+- Six picture questions retained in exactly their previous lesson and question positions.
+- Correct answers, lesson IDs, question counts, achievement rules and XP logic unchanged.
+- A few *incorrect* picture alternatives were replaced so that all options have the same illustration style: apple → cat, vehicle → adult man, adult man → boy. Those alterations do not affect correct answers.
+- On-screen choices are still named **Picture A**, **Picture B**, etc.; English answers aren't displayed as labels.
+- Screen readers receive basic visual descriptions (e.g. adult man, young girl), rather than a bare `Picture B`.
+- All 12 illustrations are precached for offline use.
+- Four already approved Llafazani MP3 files remain bundled. WevoLabs files are not included. Local private recordings remain in their existing separate database.
 
 ## Install
 
-1. In the v0.3B.3 preview, export a family backup from Parent corner.
-2. Extract the **complete** v0.3B.3.1 ZIP to your computer.
-3. Upload the extracted contents (including `audio/llafazani/` and the `.nojekyll` file) into the ROOT of `https://github.com/Sanosuke2301/shqip-quest-preview`, replacing files of the same name. Preserve folders.
-4. When GitHub Pages has deployed, open `https://sanosuke2301.github.io/shqip-quest-preview/` while online. Tap **Update now**, if offered, then reopen.
-5. Confirm Parent corner reports `VERSION 0.3B.3.1`.
-6. Open Family challenge: the second question must show “Which picture best illustrates ‘Gjyshja’?” and **Picture A/B/C** beneath the emoji options; no “Grandmother” caption should appear before answering.
-7. Retry Family 1 and Family 3 picture questions. Confirm feedback, randomisation, XP, audio and offline behaviour.
+1. On your existing preview, export a family backup in **Parent corner**.
+2. Extract `Shqip_Quest_v0.3B.3.2_Clearer_Family_Illustrations_Preview.zip`.
+3. Open <https://github.com/Sanosuke2301/shqip-quest-preview>.
+4. Upload the **contents** of the extracted ZIP to the repository root (not the ZIP itself), including the new **`assets/pictures/`** directory. Replace existing files of the same names.
+5. Commit. Wait until GitHub Pages deployment is complete, then open <https://sanosuke2301.github.io/shqip-quest-preview/> while online.
+6. Apply **Update now** when prompted; reload if necessary, and confirm Parent corner displays `0.3B.3.2`.
+7. Complete the picture questions in Family 1, Family 3 and Family Challenge. Check the age differences and the shuffled choice order.
+8. Turn on airplane mode and repeat a Family picture question to confirm images remain visible offline.
+9. Check existing profiles, XP, badges and bundled audio. Do not clear site data.
 
-**Note:** These are pictorial teaching cues. An emoji of an older woman cannot establish that a person is someone's grandmother. The associated answers should be treated as simple illustrations, not evidence about real-world family relationships.
+### Important storage behaviour
 
-See `QUESTION_AUDIT_REPORT.md` and `TEST_REPORT.md` for the complete audit and test results.
+This package uses the **same preview learner database** and **same private audio database** as v0.3B.3.1. It does not intentionally reset either. Production v0.2.3 is unchanged.
+
+### QA status
+
+Static and programmatic regression audit: **347 checks passed**, including all 59 lesson questions, six picture questions, all 12 illustration resources, unchanged scoring keys, unchanged learner storage identifiers, audio files and the offline pre-cache list. All three JavaScript sources passed Node syntax checking. Full Android/browser acceptance remains to be performed. An attempted Chromium screenshot in this environment timed out and should not be interpreted as a browser test pass.
+
+See `TEST_REPORT.md` and `TEST_CHECKLIST.md`.

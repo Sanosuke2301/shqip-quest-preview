@@ -1,7 +1,7 @@
-// Version 0.3B.3.1: preview. Four Llafazani male MP3 files bundled offline. Female candidates remain private.
+// Version 0.3B.3.2: preview. Four Llafazani male MP3 files bundled offline. Female candidates remain private.
 const CACHE_PREFIX = 'sq-preview-';
-const CACHE_NAME = CACHE_PREFIX + 'v0.3b.3.1';
-const VERSION = '0.3b.3.1';
+const CACHE_NAME = CACHE_PREFIX + 'v0.3b.3.2';
+const VERSION = '0.3b.3.2';
 
 // Fetch unique URLs for each release, but store the launch page at its normal URL.
 // This avoids keeping an outdated app.js when a browser/CDN cached the previous release.
@@ -14,6 +14,18 @@ const PRECACHE = [
   ['./manifest.webmanifest', `./manifest.webmanifest?build=${VERSION}`],
   ['./assets/icon-192.png', `./assets/icon-192.png?build=${VERSION}`],
   ['./assets/icon-512.png', `./assets/icon-512.png?build=${VERSION}`],
+  ['./assets/pictures/baby.webp', `./assets/pictures/baby.webp?build=${VERSION}`],
+  ['./assets/pictures/bicycle.webp', `./assets/pictures/bicycle.webp?build=${VERSION}`],
+  ['./assets/pictures/boy.webp', `./assets/pictures/boy.webp?build=${VERSION}`],
+  ['./assets/pictures/car.webp', `./assets/pictures/car.webp?build=${VERSION}`],
+  ['./assets/pictures/cat.webp', `./assets/pictures/cat.webp?build=${VERSION}`],
+  ['./assets/pictures/child.webp', `./assets/pictures/child.webp?build=${VERSION}`],
+  ['./assets/pictures/girl.webp', `./assets/pictures/girl.webp?build=${VERSION}`],
+  ['./assets/pictures/grandfather.webp', `./assets/pictures/grandfather.webp?build=${VERSION}`],
+  ['./assets/pictures/grandmother.webp', `./assets/pictures/grandmother.webp?build=${VERSION}`],
+  ['./assets/pictures/man.webp', `./assets/pictures/man.webp?build=${VERSION}`],
+  ['./assets/pictures/parents.webp', `./assets/pictures/parents.webp?build=${VERSION}`],
+  ['./assets/pictures/woman.webp', `./assets/pictures/woman.webp?build=${VERSION}`],
   ['./audio/llafazani/pershendetje.mp3', `./audio/llafazani/pershendetje.mp3?build=${VERSION}`],
   ['./audio/llafazani/si-je.mp3', `./audio/llafazani/si-je.mp3?build=${VERSION}`],
   ['./audio/llafazani/faleminderit.mp3', `./audio/llafazani/faleminderit.mp3?build=${VERSION}`],

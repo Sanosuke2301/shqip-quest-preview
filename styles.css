@@ -46,3 +46,10 @@
 .family-audio-grid{border-top:1px solid #eeedf5;max-height:480px;overflow-y:auto;margin-top:14px;padding-right:6px}
 .family-audio-grid .audio-pilot-row small{display:block;margin-top:5px;font-size:11px;color:#8b94a8}
 @media(max-width:680px){.family-audio-grid{max-height:390px}.family-audio-grid .button{width:100%}}
+
+/* v0.3B.3.2 — age-distinct, consistent illustration choices */
+.choice.picture-choice {min-height:105px;gap:17px;padding:7px 14px;}
+.choice.picture-choice em {width:100px;height:100px;flex:0 0 100px;background:#fffdf8;border-radius:15px;overflow:hidden;}
+.choice.picture-choice .picture-art {display:block;width:100%;height:100%;object-fit:contain;}
+.choice.picture-choice>span {font-size:14px;font-weight:850;}
+@media(max-width:410px){.choice.picture-choice{min-height:92px;gap:12px;padding:7px 10px}.choice.picture-choice em{width:82px;height:82px;flex-basis:82px}.choice.picture-choice>span{font-size:12px}}

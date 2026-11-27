@@ -1,16 +1,17 @@
-# Shqip Quest v0.3B.3.1 — Android acceptance checklist
+# Shqip Quest v0.3B.3.2 — Android acceptance checks
 
-1. Make a family backup from v0.3B.3 before deployment.
-2. Update the **preview repository only** and open the deployed app online once; apply the update if prompted.
-3. Parent corner displays **VERSION 0.3B.3.1**. Profiles, badges and XP have not changed.
-4. Enter **Family Challenge**, question 2 (grandmother). The prompt should be “Which picture best illustrates ‘Gjyshja’?” Each illustration should have only the neutral visible caption **Picture A / B / C**, not the English word “Grandmother”.
-5. Test all six picture questions across **Family Pictures**, **People in my family** and **Family Challenge**. No illustration should display its family relationship answer as a visible caption.
-6. Answer incorrectly once: feedback should identify the correct choice without rearranging the options.
-7. Repeat a lesson and confirm answer placement can change between attempts, while scoring remains correct.
-8. Test an **audio listening question** and the **standalone Listening Challenge**.
-9. Run **Personal Review** if relevant questions are due. Picture options should use the same neutral-caption design.
-10. Disconnect from Wi-Fi and check the four bundled male MP3s still play and lessons complete offline.
-11. Verify privately imported female and approved Family recordings, where present, still work.
-12. Verify XP, family progress and badges are retained after closing and reopening the app.
+For each item, tick Pass / Needs fix and note what happened:
 
-Do not clear browser/site storage, remove the installed PWA, or upload the ZIP to the main production repository.
+- [ ] Parent corner displays **Version 0.3B.3.2**.
+- [ ] Family 1 shows clear adult woman and girl illustrations; none labelled with the English answer.
+- [ ] Family 3: child illustration is clearly younger than the adult man and grandfather alternatives.
+- [ ] Family Challenge: grandmother is visually distinct from the girl and adult man.
+- [ ] Family Challenge: girl is distinguishable from boy and older man.
+- [ ] The correct choice changes A/B/C between attempts, not while answering a question.
+- [ ] Correct and incorrect choices are scored correctly, including after feedback appears.
+- [ ] All 12 new illustrations load while online, then still load in airplane mode.
+- [ ] Existing learner profiles, XP, badges and completed lessons are unchanged.
+- [ ] The four built-in Llafazani recordings still play offline.
+- [ ] Optional privately imported female recordings still work where previously installed.
+
+Do not clear browser data to test. Keep the backup from your prior version.

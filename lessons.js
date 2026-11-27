@@ -85,7 +85,7 @@ export const LESSONS = [
     questions:[
       {type:'picture',prompt:'Which picture best illustrates “Nëna”?',options:['👩','🐈','🚗'],labels:['Adult woman','Cat','Car'],answer:'👩',note:'Nëna means mother.'},
       {type:'choice',prompt:'What does “baba” commonly mean in Kosovo Albanian?',options:['Dad','Sister','Grandma'],answer:'Dad',note:'Baba is a familiar word for dad.'},
-      {type:'picture',prompt:'Which picture best illustrates “Motra”?',options:['🚲','👧','🍎'],labels:['Bicycle','Young girl','Apple'],answer:'👧',note:'Motra means sister. The picture is a visual clue, not a definition of family relationships.'},
+      {type:'picture',prompt:'Which picture best illustrates “Motra”?',options:['🚲','👧','🐈'],labels:['Bicycle','Young girl','Cat'],answer:'👧',note:'Motra means sister. The picture is a visual clue, not a definition of family relationships.'},
       {type:'choice',prompt:'What does “motra” mean?',options:['Sister','Brother','Mother'],answer:'Sister',note:'Motra is Albanian for sister.'},
       {type:'arrange',prompt:'Put the words together to say “my sister”.',tokens:['ime','Motra'],answer:'Motra ime',note:'Motra ime means my sister.'}
     ]
@@ -129,7 +129,7 @@ export const LESSONS = [
       {type:'choice',prompt:'In a family, what can “Djali” mean?',options:['Boy / Son','Girl / Daughter','Grandmother'],answer:'Boy / Son',note:'Djali can mean the boy or the son, depending on context.'},
       {type:'choice',prompt:'In a family, what can “Vajza” mean?',options:['Girl / Daughter','Boy / Son','Grandfather'],answer:'Girl / Daughter',note:'Vajza can mean the girl or the daughter, depending on context.'},
       {type:'arrange',prompt:'Put the words in order for “my son”.',tokens:['im','Djali'],answer:'Djali im',note:'Djali im means my son.'},
-      {type:'picture',prompt:'Which picture best illustrates “Fëmija”?',options:['🧒','👴','🚙'],labels:['Young person','Older man','Car'],answer:'🧒',note:'Fëmija means the child.'},
+      {type:'picture',prompt:'Which picture best illustrates “Fëmija”?',options:['🧒','👴','👨'],labels:['Young child','Older man','Adult man'],answer:'🧒',note:'Fëmija means the child.'},
       {type:'listen',audioWord:'Prindërit',variety:'Standard proposal · pending review',prompt:'Listen. What does this family word mean?',fallbackPrompt:'What does “Prindërit” mean?',options:['Parents','Children','Grandparents'],answer:'Parents',note:'Prindërit refers to parents.'},
       {type:'arrange',prompt:'Put the words in order for “my daughter”.',tokens:['ime','Vajza'],answer:'Vajza ime',note:'Vajza ime means my daughter.'},
       {type:'listen',audioWord:'Vajza',variety:'Standard proposal · pending review',prompt:'Listen. Which meaning matches?',fallbackPrompt:'What does “Vajza” mean in a family?',options:['Girl / Daughter','Boy / Son','Sister'],answer:'Girl / Daughter',note:'Vajza can mean girl or daughter.'}
@@ -155,7 +155,7 @@ export const LESSONS = [
       {type:'listen',audioWord:'Djali',variety:'Standard proposal · pending review',prompt:'Listen to the word. What could it mean?',fallbackPrompt:'What can “Djali” mean in a family?',options:['Boy / Son','Girl / Daughter','Mother'],answer:'Boy / Son',note:'Djali can mean a boy or a son.'},
       {type:'listen',audioWord:'Gjyshja',variety:'Standard proposal · pending review',prompt:'Listen to this family word. What does it mean?',fallbackPrompt:'What does “Gjyshja” mean?',options:['Grandmother','Grandfather','Sister'],answer:'Grandmother',note:'Gjyshja means grandmother.'},
       {type:'choice',prompt:'What does “Familja” mean?',options:['Family','Friend','School'],answer:'Family',note:'Familja means family.'},
-      {type:'picture',prompt:'Which picture best illustrates “Vajza”?',options:['👧','👴','👨'],labels:['Young person with long hair','Older man','Adult man'],answer:'👧',note:'Vajza can refer to a girl or daughter.'},
+      {type:'picture',prompt:'Which picture best illustrates “Vajza”?',options:['👧','👴','👦'],labels:['Young girl','Older man','Young boy'],answer:'👧',note:'Vajza can refer to a girl or daughter.'},
       {type:'choice',prompt:'Which everyday word may a child use for their mum?',options:['Mami','Gjyshi','Vëllai'],answer:'Mami',note:'Mami is a familiar word for mum.'}
     ]
   }
