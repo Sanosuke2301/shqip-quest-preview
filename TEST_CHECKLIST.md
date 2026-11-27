@@ -1,16 +1,16 @@
-# v0.3B.3 — Android / browser acceptance checklist
+# Shqip Quest v0.3B.3.1 — Android acceptance checklist
 
-1. [ ] Parent corner displays **0.3B.3** after update; no stale 0.3B.2 scripts.
-2. [ ] Existing child profiles, XP, badges, completion and Personal Review history still appear correctly.
-3. [ ] The four prior Llafazani greeting recordings play immediately without importing anything.
-4. [ ] The prior privately imported WevoLabs female recordings still play on the same device.
-5. [ ] *People in my family* (Family 3) shows four new cards and nine questions. Correct answers rotate among positions; picture labels stay with pictures.
-6. [ ] *Family challenge* appears after completing Family 3 and has twelve questions. Finishing awards Family Explorer.
-7. [ ] Family questions referencing unrecorded words show a **readable fallback** rather than a broken audio button.
-8. [ ] In Parent → Audio Library, try to import a new Family MP3 **without** ticking the fluent-speaker approval checkbox; the import must be rejected.
-9. [ ] After verifying one new Llafazani Family recording, tick approval, import its exact `llafazani_<slug>.mp3` filename, and verify its card audio and listening question if applicable.
-10. [ ] Turn on airplane mode after the update. Greetings audio and the newly imported Family audio still play.
-11. [ ] Re-run a new lesson. Answer positions vary across attempts but stay fixed when feedback is displayed.
-12. [ ] Export a fresh family backup after the session and confirm saved profile details remain intact.
+1. Make a family backup from v0.3B.3 before deployment.
+2. Update the **preview repository only** and open the deployed app online once; apply the update if prompted.
+3. Parent corner displays **VERSION 0.3B.3.1**. Profiles, badges and XP have not changed.
+4. Enter **Family Challenge**, question 2 (grandmother). The prompt should be “Which picture best illustrates ‘Gjyshja’?” Each illustration should have only the neutral visible caption **Picture A / B / C**, not the English word “Grandmother”.
+5. Test all six picture questions across **Family Pictures**, **People in my family** and **Family Challenge**. No illustration should display its family relationship answer as a visible caption.
+6. Answer incorrectly once: feedback should identify the correct choice without rearranging the options.
+7. Repeat a lesson and confirm answer placement can change between attempts, while scoring remains correct.
+8. Test an **audio listening question** and the **standalone Listening Challenge**.
+9. Run **Personal Review** if relevant questions are due. Picture options should use the same neutral-caption design.
+10. Disconnect from Wi-Fi and check the four bundled male MP3s still play and lessons complete offline.
+11. Verify privately imported female and approved Family recordings, where present, still work.
+12. Verify XP, family progress and badges are retained after closing and reopening the app.
 
-**Audio safety:** Do not publish the new Family MP3s or privately imported WevoLabs audio to GitHub. Do not clear browser site data when testing missing-audio behaviour; use a separate browser/device.
+Do not clear browser/site storage, remove the installed PWA, or upload the ZIP to the main production repository.

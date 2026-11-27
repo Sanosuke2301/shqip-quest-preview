@@ -1,32 +1,31 @@
-# Shqip Quest v0.3B.3 — Family expansion + private recording pathway
+# Shqip Quest v0.3B.3.1 — Question Quality Patch
 
-**Upload to `Sanosuke2301/shqip-quest-preview` only. Never to production.**
+**Preview release only.** Upload the extracted files to `Sanosuke2301/shqip-quest-preview`. Do not modify the production repository (`shqip-quest`).
 
-## Included
+## Why this patch
 
-- All v0.3B.2 features, balanced answer choices, four previously approved bundled Llafazani greetings MP3s, and optional private WevoLabs female audio.
-- New **Family 3 — Children and parents** (4 candidate new words; 9 questions including choice, emoji picture cues, word arrangement and audio-ready listening with safe reading fallback).
-- New **Family challenge** (12 questions covering old and new family words; a `Family Explorer` badge after finishing).
-- Existing six lesson records and existing question ordering are unchanged. New lessons are appended after `family-2`, preserving previously stored completion/mastery indexes.
-- Parent Audio Library accepts 13 **new family male Llafazani MP3s** as local imports, but requires explicit fluent-speaker approval before importing. No newly generated family MP3s are bundled.
-- Four baseline greeting recordings cached automatically for offline use. Imported family files are saved in private IndexedDB on that device.
+One Family Challenge question displayed the literal caption “Grandmother” beneath its correct picture. The same educational design issue appeared in five other picture questions, some also showing an English translation in the prompt. This means children could answer without recognising the Albanian vocabulary.
+
+## Changes
+
+- Reviewed **all 59 authored questions** across **8 lesson/challenge activities**, plus the standalone four-question listening activity and the Personal Review question reuse path.
+- Rewrote all **6 picture-matching prompts** to present the Albanian word without its English translation, e.g. “Which picture best illustrates ‘Gjyshja’?”
+- Picture options now visibly display **Picture A / Picture B / Picture C** with their emojis, not English relationship captions.
+- Replaced picture accessibility descriptions such as “Grandmother” with neutral visual descriptions (e.g. “Older woman”), making the task usable to assistive technology without explicitly revealing the target relationship.
+- The randomised option order remains stable until feedback is given; correct answers, image-option pairings and scoring logic are unchanged.
+- No question was added, removed or re-ordered. Existing XP, profiles, mastery IDs, lesson completion and badges retain their current storage keys.
+- Four previously reviewed Llafazani greeting recordings are still bundled. Existing optional locally imported WevoLabs female and family MP3s are untouched.
 
 ## Install
 
-1. Open your running v0.3B.2 preview and export a fresh family backup.
-2. Extract this ZIP. All contents (including `audio/llafazani/` and `.nojekyll`) belong in the preview repository root.
-3. Open `https://github.com/Sanosuke2301/shqip-quest-preview` and upload the extracted contents, preserving subfolders. Replace the matching files. **Do not upload to the production repository.**
-4. Wait until GitHub Pages deployment is complete, then open the preview while online, apply **Update now** if prompted and reload.
-5. Parent corner must show `VERSION 0.3B.3 · PREVIEW STORAGE`.
-6. Confirm old profiles, XP, badges, private female recordings and the four bundled male recordings remain available, including airplane mode.
-7. Complete *People in my family* and *Family challenge*. Observe shuffled answers and the new Family Explorer badge.
-8. Review the new vocabulary in `FAMILY_AUDIO_RECORDING_WORKSHEET.csv`. See `FAMILY_AUDIO_RECORDING_GUIDE.md` for instructions to generate and import new male recordings privately.
+1. In the v0.3B.3 preview, export a family backup from Parent corner.
+2. Extract the **complete** v0.3B.3.1 ZIP to your computer.
+3. Upload the extracted contents (including `audio/llafazani/` and the `.nojekyll` file) into the ROOT of `https://github.com/Sanosuke2301/shqip-quest-preview`, replacing files of the same name. Preserve folders.
+4. When GitHub Pages has deployed, open `https://sanosuke2301.github.io/shqip-quest-preview/` while online. Tap **Update now**, if offered, then reopen.
+5. Confirm Parent corner reports `VERSION 0.3B.3.1`.
+6. Open Family challenge: the second question must show “Which picture best illustrates ‘Gjyshja’?” and **Picture A/B/C** beneath the emoji options; no “Grandmother” caption should appear before answering.
+7. Retry Family 1 and Family 3 picture questions. Confirm feedback, randomisation, XP, audio and offline behaviour.
 
-## Important limitations
+**Note:** These are pictorial teaching cues. An emoji of an older woman cannot establish that a person is someone's grandmother. The associated answers should be treated as simple illustrations, not evidence about real-world family relationships.
 
-- The **new Family lesson wording is pending your fluent-speaker validation**, including regional appropriateness. It is provided in a development preview.
-- There are **no new Family MP3s in this ZIP**. Family listening prompts turn into readable questions until approved recordings are imported locally. This is deliberate to prevent unreviewed speech being distributed.
-- The Parent area is not PIN protected. Imported private audio is device-specific and is *not* part of the family JSON profile backup.
-- 0.3B.3 is not a production release. Production 0.2.3 stays untouched.
-
-Read `TEST_CHECKLIST.md` and `TEST_REPORT.md` before declaring acceptance.
+See `QUESTION_AUDIT_REPORT.md` and `TEST_REPORT.md` for the complete audit and test results.
